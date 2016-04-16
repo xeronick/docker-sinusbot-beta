@@ -22,11 +22,11 @@ chown -R 3000:3000 /data/sinusbot
 
 ### Mount host directory
 ```
-docker run --name sinusbot -d -v /data/sinusbot:/sinusbot/data -p 8087:8087 galexrt/sinusbot:latest
+docker run --name sinusbot -d -v /data/sinusbot:/sinusbot/data -p 8087:8087 xeronick/sinusbot-beta:latest
 ```
 
 ### SELinux
 If your host uses SELinux it may be necessary to use the **:z** option:
 ```
-docker run --name sinusbot -d -v /data/sinusbot:/sinusbot/data:z -p 8087:8087 galexrt/sinusbot:latest
+docker run --name sinusbot -d -v /data/sinusbot:/sinusbot/data:z -p 8087:8087 xeronick/sinusbot-beta:latest
 ```

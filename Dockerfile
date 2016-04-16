@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER Alexander Trost <galexrt@googlemail.com>
+MAINTAINER Xeronick <webmaster@solarhorizongaming.co.uk>
 
 ENV SINUS_USER="sinusbot" \
     SINUS_GROUP="sinusbot" \
@@ -8,10 +8,9 @@ ENV SINUS_USER="sinusbot" \
     SINUS_DATA="$SINUS_DIR/data" \
     YTDL_BIN="/usr/local/bin/youtube-dl" \
     TS3_DIR="$SINUS_DIR/TeamSpeak3-Client-linux_amd64" \
-    SINUS_VERSION="0.9.8" \
-    SINUS_BETA_VERSION="0.9.10-e1fdee3" \
+    SINUS_BETA_VERSION="0.9.11-ee30ef7" \
     YTDL_VERSION="latest" \
-    TS3_VERSION="3.0.18.2" \
+    TS3_VERSION="3.0.19" \
     TS3_OFFSET="25000" \
     PORT=8087
     
@@ -41,7 +40,6 @@ RUN chmod 755 /entrypoint.sh && \
     echo LC_ALL=en_US.UTF-8 >> /etc/default/locale && \
     echo LANG=en_US.UTF-8 >> /etc/default/locale && \
     mkdir -p "$SINUS_DIR" "$TS3_DIR" && \
-    # wget -qO- http://frie.se/ts3bot/sinusbot-$SINUS_VERSION.tar.bz2 | \
     wget -qO- https://www.sinusbot.com/pre/sinusbot-$SINUS_BETA_VERSION.tar.bz2 | \
     tar -xjf- -C "$SINUS_DIR" && \
     wget -q -O- "http://dl.4players.de/ts/releases/$TS3_VERSION/TeamSpeak3-Client-linux_amd64-$TS3_VERSION.run" | \

@@ -1,24 +1,24 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: sinusbot-v0.9.8
+  name: sinusbot-v0.9.11-ee30ef7
   namespace: default
   labels:
-    version: v0.9.8
+    version: v0.9.11-ee30ef7
     app: sinusbot
 spec:
   replicas: 1
   selector:
-    version: v0.9.8
+    version: v0.9.11-ee30ef7
     app: sinusbot
   template:
     metadata:
       labels:
         app: sinusbot
-        version: v0.9.8
+        version: v0.9.11-ee30ef7
     spec:
       containers:
-        - image: galexrt/sinusbot:latest
+        - image: xeronick/sinusbot-beta:latest
           name: sinusbot
           resources:
             limits:
