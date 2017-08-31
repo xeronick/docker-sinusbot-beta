@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER Xeronick  <webmaster@solarhorizongaming.co.uk>
+MAINTAINER Xeronick <webmaster@solarhorizongaming.co.uk>
 
 ENV SINUS_USER="sinusbot" \
     SINUS_GROUP="sinusbot" \
